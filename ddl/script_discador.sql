@@ -2,7 +2,7 @@
 -- Generated: 2025-11-16 22:35
 -- Model: New Model
 -- Version: 1.0
--- Project: Name of the project
+-- Project: Projeto Discador
 -- Author: WagnerScherbate
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
