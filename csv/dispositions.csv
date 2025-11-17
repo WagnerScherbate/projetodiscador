@@ -1,0 +1,8 @@
+disposition_code,disposition_label,is_final
+BUSY,Ocupado,TRUE
+NO_ANS,Sem Resposta,FALSE
+CONV,Conectado - Conversão,TRUE
+VM,Caixa Postal,FALSE
+WRAP_CB,Wrap-up Cobrança,TRUE
+CALLBACK,Solicitar Retorno,FALSE
+ABANDONED,Abandono pela Campanha,TRUE
