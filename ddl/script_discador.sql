@@ -1,0 +1,82 @@
+-- MySQL Workbench Synchronization
+-- Generated: 2025-11-16 22:35
+-- Model: New Model
+-- Version: 1.0
+-- Project: Name of the project
+-- Author: wagne
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+
+CREATE TABLE IF NOT EXISTS `mydb`.`Calls` (
+  `call_id` VARCHAR(50) NULL DEFAULT NULL,
+  `call_timestamp` VARCHAR(50) NULL DEFAULT NULL,
+  `campaign_id` VARCHAR(45) NULL DEFAULT NULL,
+  `list_id` VARCHAR(45) NULL DEFAULT NULL,
+  `lead_id` VARCHAR(45) NULL DEFAULT NULL,
+  `phone_number` VARCHAR(45) NULL DEFAULT NULL,
+  `agent_id` VARCHAR(45) NULL DEFAULT NULL,
+  `attempt_number` VARCHAR(45) NULL DEFAULT NULL,
+  `dialing_mode` VARCHAR(45) NULL DEFAULT NULL,
+  `call_direction` VARCHAR(45) NULL DEFAULT NULL,
+  `ring_time_ms` VARCHAR(45) NULL DEFAULT NULL,
+  `queue_time_ms` VARCHAR(45) NULL DEFAULT NULL,
+  `talk_time_ms` VARCHAR(45) NULL DEFAULT NULL,
+  `call_duration_seconds` VARCHAR(45) NULL DEFAULT NULL,
+  `disposition_code` VARCHAR(45) NULL DEFAULT NULL,
+  `abandoned` VARCHAR(45) NULL DEFAULT NULL,
+  `recording_url` VARCHAR(45) NULL DEFAULT NULL,
+  `cost_credits` VARCHAR(45) NULL DEFAULT NULL,
+  `wrapup_code` VARCHAR(45) NULL DEFAULT NULL,
+  INDEX `index_call_id_data` (`call_timestamp` ASC, `call_id` ASC) VISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+CREATE TABLE IF NOT EXISTS `mydb`.`Agents` (
+  `agent_id` VARCHAR(45) NULL DEFAULT NULL,
+  `agent_login` VARCHAR(45) NULL DEFAULT NULL,
+  `agent_name` VARCHAR(45) NULL DEFAULT NULL,
+  `skill_level` VARCHAR(45) NULL DEFAULT NULL,
+  `is_active` VARCHAR(45) NULL DEFAULT NULL,
+  `team` VARCHAR(45) NULL DEFAULT NULL,
+  INDEX `index_agent_id` (`agent_id` ASC) VISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+CREATE TABLE IF NOT EXISTS `mydb`.`Campaigns` (
+  `idCampaigns` INT(11) NULL DEFAULT NULL,
+  `campaign_name` VARCHAR(45) NULL DEFAULT NULL,
+  `dialing_mode` VARCHAR(45) NULL DEFAULT NULL,
+  `schedule_start` VARCHAR(45) NULL DEFAULT NULL,
+  `schedule_end` VARCHAR(45) NULL DEFAULT NULL,
+  `max_attempts` INT(11) NULL DEFAULT NULL,
+  INDEX `index_campaing_id` (`idCampaigns` ASC) VISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+CREATE TABLE IF NOT EXISTS `mydb`.`Dispositions` (
+  `dispositions_code` INT(11) NULL DEFAULT NULL,
+  `disposition_label` VARCHAR(45) NULL DEFAULT NULL,
+  `is_final` VARCHAR(45) NULL DEFAULT NULL,
+  INDEX `index_disposition_id` (`dispositions_code` ASC) VISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+CREATE TABLE IF NOT EXISTS `mydb`.`Leads` (
+  `lead_id` INT(11) NULL DEFAULT NULL,
+  `first_name` VARCHAR(45) NULL DEFAULT NULL,
+  `last_name` VARCHAR(45) NULL DEFAULT NULL,
+  `phone_number` VARCHAR(45) NULL DEFAULT NULL,
+  `city` VARCHAR(45) NULL DEFAULT NULL,
+  `state` VARCHAR(45) NULL DEFAULT NULL,
+  INDEX `index_leads_id` (`lead_id` ASC) VISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
