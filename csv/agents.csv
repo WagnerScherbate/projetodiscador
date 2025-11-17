@@ -1,0 +1,6 @@
+agent_id,agent_login,agent_name,skill_level,is_active,team
+agent-1,maria.s,Maria Silva,3,TRUE,Vendas
+agent-2,joao.r,João Ribeiro,2,TRUE,Vendas
+agent-3,ana.p,Ana Pereira,4,TRUE,Retenção
+agent-4,bruno.m,Bruno Martins,1,TRUE,Suporte
+agent-5,lucas.f,Lucas Ferreira,2,FALSE,Vendas
