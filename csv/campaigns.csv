@@ -1,0 +1,4 @@
+campaign_id,campaign_name,dialing_mode,schedule_start,schedule_end,max_attempts
+camp-001,Campanha Cobrança Novembro,predictive,08:00:00,18:00:00,3
+camp-002,Campanha Oferta Pré-Pago,progressive,09:00:00,17:30:00,2
+camp-003,Pesquisa Satisfação,preview,10:00:00,16:00:00,1
